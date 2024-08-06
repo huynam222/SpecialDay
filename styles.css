@@ -1,0 +1,118 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #f8cfcf, #f8d6a3);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#main-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; /* Để định vị video đúng cách */
+}
+
+#bear-gif {
+    width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#password-container {
+    margin-top: 20px;
+}
+
+#password-container p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#password {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    margin-right: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#gift-box {
+    position: relative;
+    margin: 20px auto;
+    width: 300px;
+    height: 300px;
+}
+
+#gift-closed, #gift-open {
+    width: 100%;
+    height: auto;
+}
+
+#letter {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Lora', serif; /* Phông chữ cho bức thư */
+    text-align: justify; /* Căn đều chữ */
+    position: relative;
+    overflow: hidden;
+    display: block;
+    opacity: 1;
+    transition: opacity 2s ease-out; /* Hiệu ứng biến mất dần dần */
+    transform: translateY(20px); /* Đẩy lên trên */
+}
+
+/* Hiệu ứng chữ gõ dần dần */
+.typing {
+    display: block;
+    white-space: pre-wrap;
+    border-right: 2px solid #000;
+    animation: blink-caret 0.75s step-end infinite, typing 4s steps(30) 1s 1 normal both; /* Hiệu ứng gõ chữ */
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+#video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}

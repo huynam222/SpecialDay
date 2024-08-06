@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Lương</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="gift-section">
+            <img id="bear-gif" src="https://media0.giphy.com/media/1yTaZSHRioZxivGzog/200w.webp" alt="Cute bear carrying a gift box">
+            <div id="password-container">
+                <p>Nhập mật khẩu để mở quà:</p>
+                <input type="password" id="password" placeholder="Nhập mật khẩu">
+                <button onclick="checkPassword()">Mở quà</button>
+            </div>
+        </div>
+        <div id="message-section" style="display:none;">
+            <div id="gift-box">
+                <img id="gift-closed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwfbjmO19BahX0yNPsc1R9Apjvt-JJar8Uhg&s" alt="Gift box closed" style="display:none;">
+                <img id="gift-open" src="https://cdn.pixabay.com/animation/2023/07/24/12/23/12-23-02-26__340.png" alt="Gift box open" style="display:none;">
+                <div id="letter" style="display:none;">
+                    <p id="message"></p>
+                </div>
+                <div id="video-container" style="display:none;">
+                    <video id="birthday-video" controls width="100%" height="100%" autoplay playsinline muted>
+                        <source src="video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Phần tử âm thanh -->
+                <audio id="happy-birthday-audio" src="music.mp3" preload="auto"></audio>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
